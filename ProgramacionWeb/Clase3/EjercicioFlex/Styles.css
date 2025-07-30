@@ -69,3 +69,10 @@ body {
     color: white;
     font-size: clamp(16px, 2vw, 32px); /* Texto que se adapta según el tamaño de pantalla */
 }
+
+.cuadri{
+    width: clamp(25px, 10vw, 200px);
+    height: clamp(25px, 10vw, 200px);
+    background-color:rgb(12, 233, 159) ;
+    
+}
