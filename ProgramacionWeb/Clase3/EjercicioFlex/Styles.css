@@ -1,49 +1,71 @@
-*{
-    margin: 0px;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgb(0, 0, 0);
-    border: 12px solid rgb(218, 23, 23)
+/* 🔧 Estilos generales para todos los elementos */
+* {
+    margin: 0;                       /* Elimina margen exterior predeterminado */
+    padding: 0;                      /* Elimina espacio interior predeterminado */
+    box-sizing: border-box;         /* Incluye el padding y borde en el tamaño total del elemento */
 }
 
-#cuadro{
-    width: auto;
-    height: auto;
-    background-color: rgb(12, 53, 233);
-    
-    display: flex;    
-    
-    justify-content: start; /* alinea los hijos en el centro - eje principal*/
-    align-items: center; /* alinea los hijos en el centro - eje secundario*/
-    gap: 20px;  /* Distancia entre los hijos */
-    flex-wrap: wrap; /* permite que los hijos se ajusten a la pantalla */
-    align-content: center; /* alinea los hijos en el centro si hay espacio extra */
+/* 🌌 Configuración del cuerpo de la página */
+body {
+    background-color: rgb(0, 0, 0); /* Fondo negro para toda la pantalla */
+    min-height: 100vh;              /* Asegura que el body ocupe toda la altura de la ventana */
+    width: 100vw;                   /* Asegura que ocupe todo el ancho de la ventana */
+    display: flex;                  /* Usa Flexbox para organizar contenido */
+    flex-direction: column;        /* Apila los elementos verticalmente */
+    justify-content: center;       /* Centra los elementos verticalmente */
+    align-items: center;           /* Centra los elementos horizontalmente */
 }
 
-#circulo{
-    width: auto;
-    height: auto;
-    background-color: blue;
+/* 🟦 Contenedor de los cuadrados */
+#cuadro {
+    width: 80vw;                    /* Ocupa el 80% del ancho de la ventana */
+    height: 40vh;                   /* Ocupa el 40% de la altura de la ventana */
+    background-color: blue;        /* Fondo azul para esta sección */
     
-    display: flex;    
-    
-    justify-content: start; /* alinea los hijos en el centro - eje principal*/
-    align-items: center; /* alinea los hijos en el centro - eje secundario*/
-    gap: 20px;  /* Distancia entre los hijos */
-    flex-wrap: nowrap; /* permite que los hijos se ajusten a la pantalla */
-    align-content: center; /* alinea los hijos en el centro si hay espacio extra */
+    display: flex;                 /* Flexbox para organizar los hijos en línea */
+    justify-content: center;      /* Centra horizontalmente los elementos hijos */
+    align-items: center;          /* Centra verticalmente los elementos hijos */
+    gap: clamp(10px, 2vw, 20px);  /* Espacio entre elementos, responsivo */
+    flex-wrap: wrap;              /* Permite que los elementos se pasen a otra línea si no caben */
 }
 
-.cu{
-    width:50%;
-    height: 50%;
-    background-color: red;  
-    width: 200px;
-   
+/* 🟦 Contenedor de los círculos */
+#circulo {
+    width: 80vw;                    /* Igual que el anterior, 80% del ancho */
+    height: 40vh;                   /* Igual que el anterior, 40% de la altura */
+    background-color: blue;        /* Fondo azul también */
+    
+    display: flex;                 /* Flexbox para los círculos */
+    justify-content: center;      /* Centra los elementos en el eje principal */
+    align-items: center;          /* Centra los elementos en el eje secundario */
+    gap: clamp(10px, 2vw, 20px);  /* Espacio entre elementos, responsivo */
+    flex-wrap: nowrap;            /* Los elementos no se envuelven, se quedan en una sola línea */
+    align-content: center;        /* Centra el grupo completo si hubiera más de una línea (aunque no se aplica aquí) */
 }
-.ci{
-    width: 50%;
-    height: 50%;
-    background-color: red;  
-    border-radius: 200px;  
+
+/* 🟥 Estilos para cada cuadrado */
+.cu {
+    width: 100px;                   /* Tamaño fijo horizontal */
+    height: 100px;                  /* Tamaño fijo vertical */
+    background-color: rgb(180, 97, 97); /* Color rojo apagado */
+    flex-shrink: 0;                /* Evita que se reduzcan si el espacio es limitado */
+    display: flex;                /* Flexbox dentro del cuadrado para centrar contenido */
+    align-items: center;          /* Centrado vertical */
+    justify-content: center;      /* Centrado horizontal */
+    color: white;                 /* Texto en blanco */
+    font-size: 20px;              /* Tamaño de texto */
+}
+
+/* 🔴 Estilos para cada círculo */
+.ci {
+    width: clamp(50px, 20vw, 400px);  /* Tamaño adaptable entre 50px y 250px según el ancho de pantalla */
+    height: clamp(50px, 20vw, 400px); /* Igual al ancho para mantener forma circular */
+    background-color: red;           /* Color rojo vivo */
+    border-radius: 50%;              /* Convierte el div en un círculo */
+    display: flex;                  /* Para centrar el texto dentro del círculo */
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;                  /* No permite que el círculo se reduzca por falta de espacio */
+    color: white;
+    font-size: clamp(16px, 2vw, 32px); /* Texto que se adapta según el tamaño de pantalla */
 }
