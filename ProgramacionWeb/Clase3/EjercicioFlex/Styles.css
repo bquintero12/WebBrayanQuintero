@@ -1,13 +1,15 @@
 *{
-    margin: 20px;
+    margin: 0px;
     padding: 20px;
     box-sizing: border-box;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
+    border: 12px solid rgb(218, 23, 23)
 }
 
 #cuadro{
     width: auto;
     height: auto;
+    background-color: rgb(12, 53, 233);
     
     display: flex;    
     
@@ -21,6 +23,7 @@
 #circulo{
     width: auto;
     height: auto;
+    background-color: blue;
     
     display: flex;    
     
