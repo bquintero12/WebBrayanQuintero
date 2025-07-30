@@ -19,7 +19,7 @@ body {
 /* 🟦 Contenedor de los cuadrados */
 #cuadro {
     width: 80vw;                    /* Ocupa el 80% del ancho de la ventana */
-    height: 40vh;                   /* Ocupa el 40% de la altura de la ventana */
+    min-height: 40vh;                   /* Ocupa el 40% de la altura de la ventana y se expande para que no quede por fuera los elemntos*/
     background-color: blue;        /* Fondo azul para esta sección */
     
     display: flex;                 /* Flexbox para organizar los hijos en línea */
@@ -45,8 +45,8 @@ body {
 
 /* 🟥 Estilos para cada cuadrado */
 .cu {
-    width: 100px;                   /* Tamaño fijo horizontal */
-    height: 100px;                  /* Tamaño fijo vertical */
+    width: 200px;                   /* Tamaño fijo horizontal */
+    height: 200px;                  /* Tamaño fijo vertical */
     background-color: rgb(180, 97, 97); /* Color rojo apagado */
     flex-shrink: 0;                /* Evita que se reduzcan si el espacio es limitado */
     display: flex;                /* Flexbox dentro del cuadrado para centrar contenido */
