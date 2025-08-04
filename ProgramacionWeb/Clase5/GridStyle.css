@@ -1,0 +1,34 @@
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    background-color: red;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "section article aside"
+        "footer footer aside";
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(232, 175, 17);
+}
+section{
+    grid-area: section;
+    background-color: rgb(46, 41, 216);
+}
+article{
+    grid-area: article;
+    background-color: rgb(15, 203, 232);
+}
+aside{
+    grid-area: aside;
+    background-color: rgb(14, 238, 41);
+}
+footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}
+
