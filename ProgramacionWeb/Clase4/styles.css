@@ -1,19 +1,85 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{ /* Selector universal que afecta a todos los elementos */
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    box-sizing: border-box; /* Hace que width y height incluyan padding y border */
 }
 
-header{
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 100px;
-    width: 100%;
+header{ /* Selector para el encabezado de la página */
+    background-color: rgb(7, 25, 139); /* Fondo azul oscuro usando RGB */
+    color: white; /* Color del texto en blanco */
+    display: flex; /* Convierte el header en un contenedor flexbox */
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Alinea el texto al centro */
+    height: 100px; /* Altura fija de 100 píxeles */
 }
 
-ul{
+/* Menú de navegación */
+nav { /* Selector para la barra de navegación */
+    background-color: rgb(20, 93, 160); /* Fondo azul más claro usando hexadecimal */
+    position: sticky; /* Se mantiene pegado en la pantalla al hacer scroll */
+    top: 0; /* Se pega en la parte superior (0px desde arriba) */
+    left: 10px; /* Posición desde la izquierda (innecesario para sticky) */
+    z-index: 1000; /* Índice alto para aparecer encima de otros elementos */
+}
+
+nav ul { /* Lista dentro de la navegación */
+    list-style: none; /* Elimina las viñetas de la lista */
+    display: flex; /* Convierte la lista en flexbox */
+    justify-content: center; /* Centra los elementos de la lista */
+    padding: 15px 0; /* Padding vertical de 15px, horizontal de 0 */
+}
+
+nav ul li { /* Elementos individuales de la lista */
+    margin: 0 20px; /* Margen horizontal de 20px entre elementos */
+}
+
+nav ul li a { /* Enlaces dentro de los elementos de lista */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color del texto de los enlaces en blanco */
+    font-weight: bold; /* Hace el texto en negrita */
+    transition: color 0.3s ease; /* Transición suave del color en 0.3 segundos */
+}
+
+nav ul li a:hover { /* Pseudo-clase cuando el mouse pasa sobre el enlace */
+    color: rgb(255, 242, 0); /* Cambia a color dorado al hacer hover */
+}
+
+/* CONTENIDO PRINCIPAL */
+main { /* Selector para el contenido principal */
+    height: 5000px; /* Altura mínima de 800 píxeles */
+    max-width: 1200; /* Ancho máximo de 1200 píxeles */
+    margin: 2rem auto; /* Margen de 2rem arriba/abajo, auto izq/der (centra) */
+    padding: 0 2rem; /* Sin padding arriba/abajo, 2rem a los lados */
+    background-color: #ecf0f1; /* Fondo gris claro */
+    border-radius: 8px; /* Esquinas redondeadas de 8 píxeles */
+    display: flex; /* Convierte main en contenedor flexbox */
+    flex-direction: column; /* Contenido de manera vertical*/
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+button{ /* Selector para todos los botones */
+    position: fixed; /* Posición fija (no se mueve con el scroll) */
+    top: 200px; /* 200px desde la parte superior */
     
+    right: 20px; /* 20px desde el borde derecho */
+    width: 50px; /* Ancho de 50 píxeles */
+    height: 50px; /* Alto de 50 píxeles */
+    font-size: 1.2rem; /* Tamaño de fuente de 1.2rem */
+    transform: scale(0.95); /* Reduce el tamaño al 95% del original */
+    background-color: rgb(255, 0, 0); /* Fondo rojo usando RGB */
+}
+
+footer{ /* Selector para el pie de página */
+    background-color: rgb(7, 25, 139); /* Mismo fondo azul del header */
+    color: white; /* Texto en color blanco */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 2rem 0; /* Padding vertical de 2rem, horizontal de 0 */
+    margin-top: 2rem; /* Margen superior de 2rem */
+}
+
+/* Párrafos del footer */
+footer p { /* Párrafos dentro del footer */
+    margin-bottom: 0.5rem; /* Margen inferior de 0.5rem entre párrafos */
 }
