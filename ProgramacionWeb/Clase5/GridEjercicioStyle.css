@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "nav header header header header"
@@ -67,19 +67,5 @@ footer{
         "section section section section section"
         "article article article article article"
         "footer footer aside aside aside";
-    }
-}
-
-@media (min-width:1024.1px){
-    .container{
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.8fr 1.5fr 1fr 0.8fr;
-        grid-template-areas: 
-        "Navbar Navbar"
-        "sidebar main"
-        "caja1 caja2"
-        "footer footer";
-
     }
 }
