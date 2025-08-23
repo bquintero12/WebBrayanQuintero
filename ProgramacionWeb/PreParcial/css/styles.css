@@ -1,23 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#container{
+#container {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 4fr  ;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 2fr 1fr 5fr 2fr;
-    grid-template-areas: 
+    grid-template-areas:
         "header header"
         "nav nav"
         "aside main"
         "footer footer";
 }
 
-header{
+header {
     grid-area: header;
     background-color: rgb(13, 93, 7);
     justify-content: center;
@@ -26,11 +26,11 @@ header{
     text-align: center;
 }
 
-#cajita{
+#cajita {
     background-color: rgb(255, 230, 1);
     padding: 20px;
     text-align: center;
-    display: inline-block;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -38,17 +38,17 @@ header{
 }
 
 
-nav{
+nav {
     grid-area: nav;
     background-color: rgb(230, 7, 7);
 }
 
-aside{
+aside {
     grid-area: aside;
     background-color: rgb(87, 59, 228);
 }
 
-main{
+main {
     grid-area: main;
     background-color: rgb(148, 143, 5);
     text-align: center;
@@ -60,7 +60,7 @@ main{
     padding: 20px;
 }
 
-section{
+section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,44 +68,44 @@ section{
     height: 60%;
     width: 100%;
     background-color: green;
-    
+
 }
 
-article{
+article {
     background-color: #aaa;
-    width: 46%;  
+    width: 46%;
     height: 82%;
 }
 
 
-footer{
+footer {
     grid-area: footer;
     background-color: blueviolet;
 }
 
-@media (max-width: 768.9px){
-    #container{
+@media (max-width: 768.9px) {
+    #container {
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr 8fr 1fr 2fr;
-        grid-template-areas: 
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer"
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer"
         ;
     }
 
-    section{
+    section {
         display: flex;
         flex-direction: column;
         padding: 10px;
         gap: 10px;
     }
-    article{
-        width: 100%;  
+
+    article {
+        width: 100%;
         height: 100%;
-        
+
     }
 }
-
