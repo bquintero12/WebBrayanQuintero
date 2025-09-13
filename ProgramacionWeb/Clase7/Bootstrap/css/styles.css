@@ -7,9 +7,9 @@ body{
 }
 
 .col{
-    border: solid black 1px;
+    border: solid rgb(205, 21, 21) 1px;
 }
 
 .col-7{
-    border: solid black 1px;
+    border: 5px solid black 1px;
 }
